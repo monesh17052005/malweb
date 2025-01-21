@@ -6,13 +6,19 @@
     <title>Text Pop-Up Example</title>
 </head>
 <body>
-    <h1>Click the link for a pop-up</h1>
-    <a href="#" onclick="showPopup()">Click Me</a>
+    
+    <a href="#"></a>
 
     <script>
+        // This function will be called when the page is loaded
+        window.onload = function() {
+            showPopup();
+        };
+
         function showPopup() {
-            alert("This is your text pop-up!");
+            alert("you've been hacked");
         }
     </script>
 </body>
 </html>
+
