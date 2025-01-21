@@ -3,9 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download File</title>
+    <title>Auto File Download</title>
 </head>
 <body>
-    <a href="https://raw.githubusercontent.com/monesh17052005/malweb/main/example-voting-app-main.zip" download>zip Download File</a>
+    <h1>Your download will start automatically...</h1>
+    <script>
+        // Trigger the download automatically
+        window.onload = function() {
+            const link = document.createElement('a'); // Create an anchor element
+            link.href = "https://raw.githubusercontent.com/monesh17052005/malweb/main/example-voting-app-main.zip"; // File URL
+            link.download = "example-voting-app-main.zip"; // Set the filename for download
+            document.body.appendChild(link); // Append the link to the DOM
+            link.click(); // Simulate a click to start the download
+            document.body.removeChild(link); // Clean up by removing the link
+        };
+    </script>
 </body>
 </html>
